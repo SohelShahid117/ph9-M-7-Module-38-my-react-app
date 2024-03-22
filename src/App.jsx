@@ -7,6 +7,7 @@ import Todo from './Todo'
 import IsDone from './IsDone'
 import Actor from './Actor'
 import './App.css'
+import BookStore from './BookStore'
 
 function App() {
   const nayok = ['skib','salib','alamgir','sabana'];
@@ -17,9 +18,16 @@ function App() {
     {id :4,name : 'andro kishor',age : 65,gender:'male'},
     {id :5,name : 'baby naznin',age : 46,gender:'female'}
   ]
+  const booook = [
+    {id:1,name:'physics',price:120},
+    {id:2,name:'Math',price:220},
+    {id:3,name:'Chemistry',price:140},
+    {id:4,name:'ICT',price:230},
+  ]
 
   return (
     <>
+    <BookStore bks = {booook}></BookStore>
       
       {
         nayok.map((name)=><Actor nam={name}></Actor>)
@@ -39,17 +47,23 @@ function App() {
       <h2>38-6 Read Only Props Two Way Of Conditional Rendering------teke soro hobe</h2>
       <h3>38-7 Six Ways To Do Conditional Rendering: If, Ternary And AND OR</h3>
       <h2>38-8 (Advanced) Rendering Lists Of Users Using Map</h2>
+      <h3>38-9 Module Summary And Recap</h3>
+
       <h1>Vite + React</h1>
+
       <Person></Person>
       <Person></Person>
       <Person></Person>
       <Person></Person>
+
       <Student name='sohel' age='22' id ='17'></Student>
       <Student name='shahid' age='22' id ='19'></Student>
       <Student name='sumi' age='12' id ='117'></Student>
       <Student></Student>
+
       <Developer></Developer>
       <Developer></Developer>
+
       {/* <Device name:"laptop" price:"55000"></Device> */}
       <Device name = "laptop" price = "55000"></Device>
       <Device name = "mobile" price = "25000"></Device>
@@ -59,8 +73,10 @@ function App() {
       <IsDone task = "JS Module 40" isDone = {true}></IsDone>
       <IsDone task = "JS Module 41" isDone = {false}></IsDone>
       <IsDone task = "JS Module 39" isDone = {true}></IsDone>
-      {/* <Todo task = "learn Redux"></Todo>
-      <Todo task = "learn Node JS"></Todo> */}
+
+      <Todo task = "learn Redux"></Todo>
+      <Todo task = "learn Node JS"></Todo>
+
       <Actor nam={'bappa raz'}></Actor>
       {
         nayok.map((name)=><Actor nam={name}></Actor>)
