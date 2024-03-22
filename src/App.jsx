@@ -1,17 +1,26 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Todo from './Todo'
+// import IsDone from './Todo'
+import IsDone from './IsDone'
+// import Actor from './Actor'
 import './App.css'
+// import Actor from './Actor'
+import Actor from './Actor'
 
 function App() {
+  const nayok = ['skib','salib','alamgir','sabana']
 
   return (
     <>
+  
       <h2>38-2 What Is Component,Component Types, Build Your First Component</h2>
       <h3>38-3 JSX, Its Rules And Add Dynamic Content To JSX In Your First Component</h3>
       <h2>38-4 Explore JSX And Props Basics</h2>
       <h3>38-5 Prop Types And How To Pass/Read A Prop</h3>
       <h2>38-6 Read Only Props Two Way Of Conditional Rendering------teke soro hobe</h2>
+      <h3>38-7 Six Ways To Do Conditional Rendering: If, Ternary And AND OR</h3>
       <h1>Vite + React</h1>
       <Person></Person>
       <Person></Person>
@@ -26,6 +35,19 @@ function App() {
       {/* <Device name:"laptop" price:"55000"></Device> */}
       <Device name = "laptop" price = "55000"></Device>
       <Device name = "mobile" price = "25000"></Device>
+
+      <Todo task1 = "learn React" task2 = "learn redux" task3='learn node JS'></Todo>
+
+      <IsDone task = "JS Module 40" isDone = {true}></IsDone>
+      <IsDone task = "JS Module 41" isDone = {false}></IsDone>
+      <IsDone task = "JS Module 39" isDone = {true}></IsDone>
+      {/* <Todo task = "learn Redux"></Todo>
+      <Todo task = "learn Node JS"></Todo> */}
+      <Actor nam={'bappa raz'}></Actor>
+      {
+        nayok.map((name)=><Actor nam={name}></Actor>)
+
+      }
     </>
   )
 }
