@@ -1,19 +1,36 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Singer from './Singer'
 import Todo from './Todo'
 // import IsDone from './Todo'
 import IsDone from './IsDone'
-// import Actor from './Actor'
-import './App.css'
-// import Actor from './Actor'
 import Actor from './Actor'
+import './App.css'
 
 function App() {
-  const nayok = ['skib','salib','alamgir','sabana']
+  const nayok = ['skib','salib','alamgir','sabana'];
+  const singer = [
+    {id :1,name : 'habib',age : 26,gender:'male'},
+    {id :2,name : 'Asif',age : 36,gender:'male'},
+    {id :3,name : 'Koli',age : 26,gender:'female'},
+    {id :4,name : 'andro kishor',age : 65,gender:'male'},
+    {id :5,name : 'baby naznin',age : 46,gender:'female'}
+  ]
 
   return (
     <>
+      
+      {
+        nayok.map((name)=><Actor nam={name}></Actor>)
+
+      }
+      <Singer singr = {singer[0]}></Singer>
+     
+      {
+        singer.map((x)=><Singer singr={x}></Singer>)
+      }
+     
   
       <h2>38-2 What Is Component,Component Types, Build Your First Component</h2>
       <h3>38-3 JSX, Its Rules And Add Dynamic Content To JSX In Your First Component</h3>
@@ -21,6 +38,7 @@ function App() {
       <h3>38-5 Prop Types And How To Pass/Read A Prop</h3>
       <h2>38-6 Read Only Props Two Way Of Conditional Rendering------teke soro hobe</h2>
       <h3>38-7 Six Ways To Do Conditional Rendering: If, Ternary And AND OR</h3>
+      <h2>38-8 (Advanced) Rendering Lists Of Users Using Map</h2>
       <h1>Vite + React</h1>
       <Person></Person>
       <Person></Person>
